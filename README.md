@@ -3,8 +3,11 @@ Spring Mail - Sending Email with &lt;#Freemarker> HTML Template Example
 
 ##### Usage in Postman http://localhost:8080/sendingEmail
 ##### {
-#####    "to":"joe@yahoo.co.uk",
-#####    "from":"me@hotmail.com",
+#####    "to":"prog1@yahoo.co.uk",
+#####    "from":"joe@hotmail.com",
 #####    "subject":"test subject",
-#####    "name":"Joe Bloggs"
+#####    "fromName":"Joe Bloggs",
+#####    "toName": "A Programmer",
+#####    "location": "on behalf of <strong>Match</strong>Fit",
+#####    "body": "I notice you have yet to complete your <strong>Match</strong>Fit survey.  This is an important HR requirement."
 ##### }

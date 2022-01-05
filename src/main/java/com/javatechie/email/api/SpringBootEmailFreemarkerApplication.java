@@ -24,8 +24,10 @@ public class SpringBootEmailFreemarkerApplication {
 	@PostMapping("/sendingEmail")
 	public MailResponse sendEmail(@RequestBody MailRequest request) {
 		Map<String, Object> model = new HashMap<>();
-		model.put("Name", request.getName());
-		model.put("location", "London, UK");
+		model.put("fromName", request.getFromName());
+		model.put("location", request.getLocation());
+		model.put("toName", request.getToName());
+		model.put("body", request.getBody());
 		return service.sendEmail(request, model);
 
 	}

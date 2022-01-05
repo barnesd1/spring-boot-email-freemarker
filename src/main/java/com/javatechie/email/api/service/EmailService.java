@@ -38,7 +38,7 @@ public class EmailService {
 			MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
 					StandardCharsets.UTF_8.name());
 			// add attachment
-			helper.addAttachment("logo.png", new ClassPathResource("logo.png"));
+			helper.addAttachment("emailLogo.jpg", new ClassPathResource("emailLogo.jpg"));
 
 			Template t = config.getTemplate("email-template.ftl");
 			String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
@@ -47,13 +47,14 @@ public class EmailService {
 			helper.setText(html, true);
 			helper.setSubject(request.getSubject());
 			helper.setFrom(request.getFrom());
+	
 			sender.send(message);
 
-			response.setMessage("mail send to : " + request.getTo());
+			response.setMessage("Mail sent to : " + request.getTo());
 			response.setStatus(Boolean.TRUE);
 
 		} catch (MessagingException | IOException | TemplateException e) {
-			response.setMessage("Mail Sending failure : "+e.getMessage());
+			response.setMessage("Error, failed to send mail to : "+e.getMessage());
 			response.setStatus(Boolean.FALSE);
 		}
 

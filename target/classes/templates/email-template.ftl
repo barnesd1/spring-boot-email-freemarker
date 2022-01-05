@@ -2,35 +2,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Java Techie Mail</title>
+<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr>
-			<td align="center" valign="top" bgcolor="#838383"
-				style="background-color: #838383;"><br> <br>
+			<td align="center" valign="top" bgcolor="#FFFF5F"
+				style="background-color: #FFFF5F;"><br> <br>
 				<table width="600" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-						<td align="center" valign="top" bgcolor="#d3be6c"
-							style="background-color: #d3be6c; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; padding: 0px 15px 10px 15px;">
+						<td align="left" valign="top" bgcolor="#FFFFF0"
+							style="background-color: #FFFFF0; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; padding: 0px 15px 10px 15px;">
 							
-							<div style="font-size: 48px; color:blue;">
-								<b>Java Techie</b>
+							<div">
+							    <h3><br><b>${toName}</b></h3>
 							</div>
 							
-							<div style="font-size: 24px; color: #555100;">
-								<br> Sending Email using Spring Boot with <b>FreeMarker
-									template !!! <br>
-							</div>
 							<div>
-								<br> Java Techie is a channel where we create and publish
-								videos on<br> 'how to' about latest technology trends like<br>
-								spring ,spring boot ,hibernate , web services and micro service
-								<br> ""This channel is created to share the knowledge and
-								to gain the knowledge"<br>
-								<br>"Sharing the knowledge is biggest learning" <br> <br>
-								<br> <br> <b>${Name}</b><br>${location}<br>
-								<br>
+								<h4><br> ${body} <br></h4>
+								<br><br>
+								<h3><br> <br> <b>${fromName}</b></h3>
+								<h4>${location}<br><br></h4>
 							</div>
 						</td>
 					</tr>
